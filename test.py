@@ -16,7 +16,7 @@ def predict():
         saver.restore(sess,tf.train.latest_checkpoint("model/"))
         num = 1
         while 1:
-            my_image = "sample/" + str(num) + ".jpg"    
+            my_image = "datasets/sample/" + str(num) + ".jpg"    
             num_px = 64
             fname =  my_image 
             image = np.array(ndimage.imread(fname, flatten=False))
