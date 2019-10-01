@@ -115,7 +115,7 @@ def forward_propagation(X,keep_prob):
     k = 256
     l = 512
     m = 1024
-    Z1 = tf.contrib.layers.conv2d(inputs=X, num_outputs=64, kernel_size=[7,7], stride=[2,2], padding="SAME",activation_fn=None)
+    Z1 = tf.contrib.layers.conv2d(inputs=X, num_outputs=64, kernel_size=[3,3], stride=[1,1], padding="SAME",activation_fn=None)
     Z1 = tf.layers.batch_normalization(Z1,3, training=True)
     Z1 = tf.nn.relu(Z1)
     Z1 = tf.contrib.layers.max_pool2d(inputs=Z1, kernel_size=[3,3], stride=[2,2], padding='VALID')
